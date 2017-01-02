@@ -12,3 +12,5 @@ Entry.prototype.wordCount = function (content) {
   })
 return count;
 };
+
+exports.entryModule = Entry;

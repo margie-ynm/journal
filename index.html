@@ -4,25 +4,26 @@
     <meta charset="utf-8">
     <title>Journal</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>JOURNAL ENTRIES!</h1>
-      <form id="#journal">
+      <form id="journal">
         <div class="form-group">
           <label class for="title">Enter a title</label>
             <br>
           <input id="title" type="text">
         </div>
-          <div class="form-group">
+        <div class="form-group">
           <label for="entry">Enter an entry</label>
           <br>
           <textarea name="entry" id='entry' rows="8" cols="40"></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
-    <div id="output">
+    <div id="output"></div>
   </div>
-</div>
 </body>
 </html>
