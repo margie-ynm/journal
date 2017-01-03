@@ -41,6 +41,16 @@ Entry.prototype.consonantCount = function(content) {
   return count;
 };
 
+Entry.prototype.getTeaser = function(content) {
+    var teaser = [];
+    var words = content.split(" ");
+  for(var i = 1; i <= 8; i++) {
+      ;
+    teaser.push(words.shift());
+    };
+  teaser = teaser.join(" ");
+  return teaser
+};
 exports.entryModule = Entry;
 
 },{}],2:[function(require,module,exports){
@@ -55,9 +65,11 @@ $(document).ready(function() {
     var output = currentEntry.wordCount(content);
     var outputVowels = currentEntry.vowelCount(content);
     var outputConsonants = currentEntry.consonantCount(content);
+    var outputTeaser = currentEntry.getTeaser(content);
     $("#output").append("<li>" + output + "</li>");
     $("#output").append("<li>There are " + outputVowels + " vowels</li>");
     $("#output").append("<li>There are " + outputConsonants + " consonants</li>");
+    $("#output").append("<li>Here's a preview " + "'" + outputTeaser +"'" + " </li>");
   });
 });
 

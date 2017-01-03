@@ -9,8 +9,10 @@ $(document).ready(function() {
     var output = currentEntry.wordCount(content);
     var outputVowels = currentEntry.vowelCount(content);
     var outputConsonants = currentEntry.consonantCount(content);
+    var outputTeaser = currentEntry.getTeaser(content);
     $("#output").append("<li>" + output + "</li>");
     $("#output").append("<li>There are " + outputVowels + " vowels</li>");
     $("#output").append("<li>There are " + outputConsonants + " consonants</li>");
+    $("#output").append("<li>Here's a preview " + "'" + outputTeaser +"'" + " </li>");
   });
 });

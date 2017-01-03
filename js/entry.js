@@ -40,4 +40,14 @@ Entry.prototype.consonantCount = function(content) {
   return count;
 };
 
+Entry.prototype.getTeaser = function(content) {
+    var teaser = [];
+    var words = content.split(" ");
+  for(var i = 1; i <= 8; i++) {
+      ;
+    teaser.push(words.shift());
+    };
+  teaser = teaser.join(" ");
+  return teaser
+};
 exports.entryModule = Entry;
